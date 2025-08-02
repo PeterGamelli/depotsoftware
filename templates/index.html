@@ -1,3 +1,33 @@
-<h1>Depot</h1>
+{% extends "base.html" %}
 
-<p>Welcome {{ first_name }}</p>
+{% block body%}
+
+<div class="container">
+    <h1>Welcome</h1>
+    <form action="">
+        <p>Username</p>
+        <input
+            type="text" 
+            name="username" 
+            placeholder="username" 
+        />
+        <p>Password</p>
+        <input
+            type="password" 
+            name="password" 
+            placeholder="password" 
+        />
+        <input
+            type="submit" 
+            value="Login"
+            class="btn btn-login" 
+        />
+        
+        <br />
+        <p>Click
+            <a href="/register">here</a>
+        to register</p>
+    </form>
+</div>
+
+{% endblock %}
